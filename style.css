@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&display=swap');
+:root{
+    --primary-color: #5b79ca;
+    --secondary-color: antiquewhite;
+    --tranparent-color: #ffffff2f;
+    --background-color: #020305;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Figtree', serif;
+}
+
+h1,h2,p{
+    margin: 0;
+    padding: 0;
+    color: var(--secondary-color);
+}
+
+body{
+  position: relative;
+  max-width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 2rem 0;
+}
+/*=========== Container ===========*/
+.container{
+    width: 50vw;
+    height: 70vh;
+    position: relative;
+
+    .card{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: var(--tranparent-color);
+        backdrop-filter: blur(4px);
+        border-radius: .5rem;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .title{
+        width: 35%;
+        height: 100%;
+        padding: .5rem 1rem;
+        text-align: center;
+    }
+
+    .content{
+        width: 62%;
+        height: 100%;
+        background-color: var(--primary-color);
+        text-align: center;
+        padding: 1rem 2rem;
+
+        h1,h2{
+            padding: .3rem .5rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        p{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 2rem;
+            padding: .3rem .5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 1.5rem;
+            color: var(--secondary-color);
+            font-family: 'Figtree', serif;
+        }
+        a{
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Figtree', serif;
+            padding: .5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 5px;
+            transition: all .3s ease-in-out;
+          }
+        
+          a:hover{
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+          }
+    }
+
+    .snow{
+        position: absolute;
+        top: -5%;
+        border-radius: 50%;
+        padding: 0;
+        margin: 0;
+        z-index: -1;
+        border-radius: 50%;
+        background-color: var(--secondary-color);
+        opacity: 0;
+    }
+}
+/*=========== Contaier End ============*/
+
+/*=========== Snow Flakes ============*/
+
+.flake1{
+    left: 15px;
+    width: 7px;
+    height: 7px;
+    animation: movn-dot 4s infinite linear;
+}
+
+.flake2{
+    left: 30px;
+    width: 17px;
+    height: 17px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 3.5s;
+}
+
+.flake3{
+    left: 45px;
+    width: 16px;
+    height: 16px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 2s;
+}
+
+.flake4{
+    left: 60px;
+    width: 6px;
+    height: 6px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: .6s;
+}
+
+.flake5{
+    left: 75px;
+    width: 10px;
+    height: 10px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay:1.7s;
+}
+
+.flake6{
+    left: 90px;
+    width: 9px;
+    height: 9px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: .4s;
+}
+
+.flake7{
+    left: 105px;
+    width: 16px;
+    height: 16px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 2.1s;
+}
+
+.flake8{
+    left: 120px;
+    width: 20px;
+    height: 20px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 3s;
+}
+
+.flake9{
+    left: 135px;
+    width: 16px;
+    height: 16px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay:.2s;
+}
+
+.flake10{
+    left: 150px;
+    width: 16px;
+    height: 16px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 1.4s;
+}
+
+.flake11{
+    left: 165px;
+    width: 16px;
+    height: 16px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: .7s;
+}
+
+.flake12{
+    left: 180px;
+    width: 7px;
+    height: 7px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay: 2.5s;
+}
+
+.flake13{
+    left: 195px;
+    width: 20px;
+    height: 20px;
+    animation: movn-dot 4s infinite linear;
+    animation-delay:3.1s;
+}
+
+@keyframes movn-dot {
+    0%{
+      top: -5%;
+      opacity: 0;
+    }
+  
+    50%{
+      top: 42.5%;
+      opacity: 1;
+    }
+  
+  
+    100%{
+        top: 90%;
+        opacity: 0;
+    }
+  }
+
+@media only screen and (max-width: 885px) {
+    .container{
+        height: 100%;
+    }
+
+    .card{
+        flex-direction: column;
+        .content{
+            width: 100%;
+            height: 70%;
+            padding: 2rem 1rem;
+        }
+        .title{
+            width: 100%;
+            height: 30%;
+            padding: 1rem 1rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 750px){
+    body{
+        height: 130vh;
+    }
+    .container{
+        width: 80%;
+    }
+}
+
+
