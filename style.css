@@ -33,6 +33,8 @@ body{
     width: 50vw;
     height: 70vh;
     position: relative;
+    overflow: hidden;
+    border-radius: .5rem;
 
     .card{
         position: absolute;
@@ -107,6 +109,18 @@ body{
         background-color: var(--secondary-color);
         opacity: 0;
     }
+}
+
+.container::after{
+    content: '';
+    position: absolute;
+    width: 130%;
+    height: 130%;
+    bottom: -95%;
+    left: -12%;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    z-index: -1;
 }
 /*=========== Contaier End ============*/
 
@@ -236,6 +250,12 @@ body{
 @media only screen and (max-width: 885px) {
     .container{
         height: 100%;
+    }
+
+    .container::after{
+        height: 100%;
+        bottom: -22%;
+        left: -2%;
     }
 
     .card{
